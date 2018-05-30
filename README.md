@@ -1,4 +1,4 @@
-# BasicAppAngular
+# Advance Angular Template
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.0.
 
@@ -48,6 +48,34 @@ This step will:
 * Generate a package with the manifest and production bundle.
 * Install the package over HTTP on your Sitecore instance.
 
-## Further help
+## Adding new Components
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+To add new Sitecore aware components, you need to complete the folliwing three steps:
+ - Generate an Angular component using the cli
+    - `ng g c <new component name>`
+ - Add the new component to the JssModule's list located at  `src/app/app.modules.ts`
+ - Generate a new `Sitecore component definition`
+
+### Sitecore component definition
+All sitecore component definitions are located in `sitecore/definitions/components`
+
+*Example*
+
+```javascript
+import { Manifest, CommonFieldTypes, SitecoreIcon } from '@sitecore-jss/sitecore-jss-manifest';
+
+export default (manifest: Manifest) => {
+    manifest.addComponent({
+        name: 'Welcome',
+        displayName: 'Welcome',
+        // totally optional, but fun
+        icon: SitecoreIcon.EmoticonSmile,
+        fields: [
+        { name: 'logoImage', type: CommonFieldTypes.Image },
+        { name: 'title', type: CommonFieldTypes.SingleLineText },
+        { name: 'text', type: CommonFieldTypes.RichText },
+        ],
+        params: ['className']
+    });
+};
+```
