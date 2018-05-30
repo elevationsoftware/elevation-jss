@@ -1,0 +1,45 @@
+# This is a YAML-formatted content item.
+# You may use JSON files if you prefer; however YAML is simpler to read
+# and allows comments like this one :)
+name: home
+id: home-page
+displayName: Home
+placeholders:
+  main:
+  #- id: main-header-app
+  - componentName: Welcome
+    fields:
+      title:
+        value: Home Page
+      text:
+        # to author content in YAML, use _multi-line values_ (prefixed with | + CRLF)
+        # as long as the same indent is preserved at the beginning of each line, no escaping
+        # is required at all in the value, making it easy to read
+        value: |
+          <p>Bacon ipsum dolor amet swine pork loin sirloin prosciutto turducken short ribs chicken biltong. 
+          Filet mignon shoulder strip steak, sausage t-bone swine tail brisket tongue picanha. Fatback tenderloin landjaeger brisket jerky meatloaf, 
+          capicola pork belly turkey jowl bacon tail cupim. Picanha pork chop chicken alcatra bresaola. Flank porchetta burgdoggen brisket pork loin, 
+          shank salami rump tri-tip sirloin.</p>
+          <p>Landjaeger cow prosciutto porchetta meatball salami tongue. Doner tenderloin ham salami. Strip steak turducken biltong chicken sirloin. 
+          Frankfurter ball tip ground round meatloaf sirloin leberkas beef pork chop kielbasa shank picanha ham hock bacon. Swine biltong chicken tail, 
+          salami pork belly rump picanha ground round beef tongue alcatra kevin venison. Filet mignon pastrami pork chop capicola brisket, 
+          beef sausage drumstick shank ham ball tip salami hamburger cow turkey. Porchetta meatloaf pancetta, 
+          cow turkey bacon burgdoggen prosciutto shankle spare ribs.</p>
+      logoImage:
+        value:
+          src: "/data/media/img/london.jpg"
+          alt: Logo
+    params:
+      className: 'homepage'
+  #- componentName: Footer
+  # This is a shared component that is 'included' here. See ../component-content/Welcome/SharedWelcome/en.yaml
+  # using shared components is a great way to sketch out a site quickly with FPO content.
+  #- id: shared-welcome
+    # Copy causes a duplicate of the shared component's content to go here, instead of sharing the same content item
+    # after import to Sitecore. This can be good for FPO content that's used repeatedly, but won't be the same content later.
+    #copy: true
+  #- id: shared-welcome
+    # Copy causes a duplicate of the shared component's content to go here, instead of sharing the same content item
+    # after import to Sitecore. This can be good for FPO content that's used repeatedly, but won't be the same content later.
+    #copy: true
+  #- id: shared-welcome
