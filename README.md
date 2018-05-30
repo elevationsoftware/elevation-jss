@@ -9,6 +9,31 @@ There are two steps required to add routes to the application:
 - Add a new directory to the `data/routes`
 - Add child routes to `build/sitecore-context-navigation-mock.js`
 
+*Update mock routes*
+
+```javascript
+let navigation = [
+    {
+      name: 'Home',
+      path: '/',
+      children: [
+        {
+          name: 'About',
+          path: '/about'
+        },
+        {
+          name: 'Products',
+          path: '/products'
+        },
+        {
+          name: 'Gallery',
+          path: '/gallery'
+        }
+      ],
+    },
+  ];
+```
+
 The directory structure should looks as follow:
 - products - `data/routes/products/en.yaml`
 - about - `data/routes/about/en.yaml`
