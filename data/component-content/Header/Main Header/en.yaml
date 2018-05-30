@@ -1,0 +1,8 @@
+name: Shared Header
+componentName: Header
+id: main-header-app
+fields:
+  logoImage:
+    value:
+      src: "/data/media/img/elevatedlogo.png"
+      alt: Logo

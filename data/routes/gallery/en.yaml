@@ -1,9 +1,8 @@
 # This is a YAML-formatted content item.
 # You may use JSON files if you prefer; however YAML is simpler to read
 # and allows comments like this one :)
-name: home
-id: home-page
-displayName: Home
+name: gallery
+displayName: Gallery
 placeholders:
   main:
   - id: main-header-app
@@ -32,14 +31,3 @@ placeholders:
     params:
       className: 'homepage'
   - componentName: Footer
-  # This is a shared component that is 'included' here. See ../component-content/Welcome/SharedWelcome/en.yaml
-  # using shared components is a great way to sketch out a site quickly with FPO content.
-  #- id: shared-welcome
-    # Copy causes a duplicate of the shared component's content to go here, instead of sharing the same content item
-    # after import to Sitecore. This can be good for FPO content that's used repeatedly, but won't be the same content later.
-    #copy: true
-  #- id: shared-welcome
-    # Copy causes a duplicate of the shared component's content to go here, instead of sharing the same content item
-    # after import to Sitecore. This can be good for FPO content that's used repeatedly, but won't be the same content later.
-    #copy: true
-  #- id: shared-welcome

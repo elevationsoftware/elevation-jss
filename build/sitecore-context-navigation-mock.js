@@ -9,6 +9,18 @@ module.exports = function navigationMockContext(request) {
       name: 'Home',
       path: '/',
       children: [
+        {
+          name: 'About',
+          path: '/about'
+        },
+        {
+          name: 'Products',
+          path: '/products'
+        },
+        {
+          name: 'Gallery',
+          path: '/gallery'
+        }
       ],
     },
   ];
@@ -19,6 +31,18 @@ module.exports = function navigationMockContext(request) {
         name: 'Inicio',
         path: '/',
         children: [
+          {
+            name: 'Acera De',
+            path: '/about',
+          },
+          {
+            name: 'Productors',
+            path: '/products'
+          },
+          {
+            name: 'Galeria',
+            path: '/gallery'
+          }
         ],
       },
     ];
