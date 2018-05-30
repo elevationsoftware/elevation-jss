@@ -9,25 +9,109 @@ placeholders:
   - componentName: Welcome
     fields:
       title:
-        value: Home Page
+        value: About Page
       text:
         # to author content in YAML, use _multi-line values_ (prefixed with | + CRLF)
         # as long as the same indent is preserved at the beginning of each line, no escaping
         # is required at all in the value, making it easy to read
         value: |
-          <p>Bacon ipsum dolor amet swine pork loin sirloin prosciutto turducken short ribs chicken biltong. 
-          Filet mignon shoulder strip steak, sausage t-bone swine tail brisket tongue picanha. Fatback tenderloin landjaeger brisket jerky meatloaf, 
-          capicola pork belly turkey jowl bacon tail cupim. Picanha pork chop chicken alcatra bresaola. Flank porchetta burgdoggen brisket pork loin, 
+          <p>Bacon ipsum dolor amet swine pork loin sirloin prosciutto turducken short ribs chicken biltong.  
+          Filet mignon shoulder strip steak, sausage t-bone swine tail brisket tongue picanha.  
+          Fatback tenderloin landjaeger brisket jerky meatloaf, capicola pork belly turkey jowl bacon tail cupim.  
+          Picanha pork chop chicken alcatra bresaola.  Flank porchetta burgdoggen brisket pork loin, 
           shank salami rump tri-tip sirloin.</p>
-          <p>Landjaeger cow prosciutto porchetta meatball salami tongue. Doner tenderloin ham salami. Strip steak turducken biltong chicken sirloin. 
-          Frankfurter ball tip ground round meatloaf sirloin leberkas beef pork chop kielbasa shank picanha ham hock bacon. Swine biltong chicken tail, 
-          salami pork belly rump picanha ground round beef tongue alcatra kevin venison. Filet mignon pastrami pork chop capicola brisket, 
-          beef sausage drumstick shank ham ball tip salami hamburger cow turkey. Porchetta meatloaf pancetta, 
-          cow turkey bacon burgdoggen prosciutto shankle spare ribs.</p>
+          <p>Landjaeger cow prosciutto porchetta meatball salami tongue.  Doner tenderloin ham salami.  
+          Strip steak turducken biltong chicken sirloin.  
+          Frankfurter ball tip ground round meatloaf sirloin leberkas beef pork chop kielbasa shank picanha ham hock bacon.  
+          Swine biltong chicken tail, salami pork belly rump picanha ground round beef tongue alcatra kevin venison.  
+          Filet mignon pastrami pork chop capicola brisket, beef sausage drumstick shank ham ball tip salami hamburger cow turkey. 
+          Porchetta meatloaf pancetta, cow turkey bacon burgdoggen prosciutto shankle spare ribs.</p>
+          <p>Tenderloin alcatra pancetta drumstick spare ribs salami sausage tongue sirloin prosciutto chuck 
+          filet mignon rump venison meatloaf.  Jerky ham beef kevin sausage short ribs pastrami chuck fatback.  
+          Landjaeger tenderloin ground round turducken meatloaf chuck hamburger jowl rump chicken short loin spare ribs cupim capicola.  
+          Meatball sirloin doner ground round, t-bone venison jerky turducken ball tip spare ribs fatback ribeye pork chop.  
+          Turkey biltong landjaeger jerky cupim burgdoggen drumstick.</p>
+          <p>Pig turkey chuck biltong capicola tongue turducken pork tri-tip buffalo sirloin short loin pork chop pancetta prosciutto.  
+          Picanha rump jerky pig pork belly frankfurter chicken turkey pork chop jowl ball tip fatback tongue.  
+          Rump jowl porchetta doner strip steak t-bone drumstick alcatra buffalo short loin.  
+          Buffalo meatloaf jowl andouille cow.  Tongue burgdoggen shoulder, t-bone meatloaf tail filet mignon fatback leberkas turducken 
+          chuck ham hock jowl porchetta doner.  Sausage landjaeger cow jerky ham hock frankfurter.  Filet mignon ribeye chicken, 
+          short ribs pastrami salami hamburger short loin prosciutto.</p><p>Porchetta flank picanha, 
+          tenderloin sausage meatloaf beef ham burgdoggen salami beef ribs turkey cow sirloin.  
+          Corned beef pork chop meatloaf burgdoggen.  Frankfurter strip steak shankle kielbasa pig ball tip.  
+          Capicola pork spare ribs strip steak buffalo pork loin sirloin kielbasa t-bone swine.  
+          Kielbasa chuck corned beef ball tip ribeye turkey.  
+          Meatloaf cupim bacon filet mignon fatback strip steak corned beef kielbasa tenderloin chuck short loin beef.  
+          Bacon tail meatball turducken fatback.</p>
       logoImage:
         value:
-          src: "/data/media/img/london.jpg"
+          src: "/data/media/img/brothers.png"
           alt: Logo
     params:
-      className: 'homepage'
-  - componentName: Footer
+      className: 'aboutpage'
+  - componentName: Column2
+    id: about-page-column2-component
+    placeholders:
+      c-left:
+      - name: column2-left
+        displayName: Card Lefts
+        componentName: Card1
+        fields:
+          title:
+            value: Card 0 1
+          text:
+            # to author content in YAML, use _multi-line values_ (prefixed with | + CRLF)
+            # as long as the same indent is preserved at the beginning of each line, no escaping
+            # is required at all in the value, making it easy to read
+            value: |
+              <p>Landjaeger cow prosciutto porchetta meatball salami tongue.</p>
+          logoImage:
+            value:
+              src: "/data/media/img/facerec.jpg"
+              alt: Logo
+          link:
+            value:
+              href: http://www.sitecore.net
+              text: Learn More
+              class: btn btn-info btn-lg
+              target: _blank
+        params:
+          className: 'aboutpage'
+      c-right:
+      - name: column2-right
+        displayName: Card Right
+        componentName: Card1
+        fields:
+          title:
+            value: Card 0 1
+          text:
+            # to author content in YAML, use _multi-line values_ (prefixed with | + CRLF)
+            # as long as the same indent is preserved at the beginning of each line, no escaping
+            # is required at all in the value, making it easy to read
+            value: |
+              <p>Landjaeger cow prosciutto porchetta meatball salami tongue.</p>
+          logoImage:
+            value:
+              src: "/data/media/img/facerec.jpg"
+              alt: Logo
+          link:
+            value:
+              href: http://www.sitecore.net
+              text: Learn More
+              class: btn btn-info btn-lg
+              target: _blank
+        params:
+          className: 'aboutpage'
+
+  
+  # This is a shared component that is 'included' here. See ../component-content/Welcome/SharedWelcome/en.yaml
+  # using shared components is a great way to sketch out a site quickly with FPO content.
+  #- id: shared-welcome
+    # Copy causes a duplicate of the shared component's content to go here, instead of sharing the same content item
+    # after import to Sitecore. This can be good for FPO content that's used repeatedly, but won't be the same content later.
+    #copy: true
+  #- id: shared-welcome
+    # Copy causes a duplicate of the shared component's content to go here, instead of sharing the same content item
+    # after import to Sitecore. This can be good for FPO content that's used repeatedly, but won't be the same content later.
+    #copy: true
+  #- id: shared-welcome

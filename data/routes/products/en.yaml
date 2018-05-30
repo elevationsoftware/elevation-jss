@@ -9,25 +9,125 @@ placeholders:
   - componentName: Welcome
     fields:
       title:
-        value: Home Page
+        value: Product Page
       text:
         # to author content in YAML, use _multi-line values_ (prefixed with | + CRLF)
         # as long as the same indent is preserved at the beginning of each line, no escaping
         # is required at all in the value, making it easy to read
         value: |
-          <p>Bacon ipsum dolor amet swine pork loin sirloin prosciutto turducken short ribs chicken biltong. 
-          Filet mignon shoulder strip steak, sausage t-bone swine tail brisket tongue picanha. Fatback tenderloin landjaeger brisket jerky meatloaf, 
-          capicola pork belly turkey jowl bacon tail cupim. Picanha pork chop chicken alcatra bresaola. Flank porchetta burgdoggen brisket pork loin, 
-          shank salami rump tri-tip sirloin.</p>
-          <p>Landjaeger cow prosciutto porchetta meatball salami tongue. Doner tenderloin ham salami. Strip steak turducken biltong chicken sirloin. 
-          Frankfurter ball tip ground round meatloaf sirloin leberkas beef pork chop kielbasa shank picanha ham hock bacon. Swine biltong chicken tail, 
-          salami pork belly rump picanha ground round beef tongue alcatra kevin venison. Filet mignon pastrami pork chop capicola brisket, 
-          beef sausage drumstick shank ham ball tip salami hamburger cow turkey. Porchetta meatloaf pancetta, 
-          cow turkey bacon burgdoggen prosciutto shankle spare ribs.</p>
+          <p>Landjaeger cow prosciutto porchetta meatball salami tongue.  Doner tenderloin ham salami.  
+          Strip steak turducken biltong chicken sirloin.  
+          Frankfurter ball tip ground round meatloaf sirloin leberkas beef pork chop kielbasa shank picanha ham hock bacon.  
+          Swine biltong chicken tail, salami pork belly rump picanha ground round beef tongue alcatra kevin venison.  
+          Filet mignon pastrami pork chop capicola brisket, beef sausage drumstick shank ham ball tip salami hamburger cow turkey. 
+          Porchetta meatloaf pancetta, cow turkey bacon burgdoggen prosciutto shankle spare ribs.</p>
       logoImage:
         value:
-          src: "/data/media/img/london.jpg"
+          src: "/data/media/img/product-banner.jpg"
           alt: Logo
     params:
-      className: 'homepage'
-  - componentName: Footer
+      className: 'aboutpage'
+  - componentName: Column4
+    placeholders:
+      c1:
+        - name: column4-1
+          displayName: Card 1
+          componentName: Card1
+          fields:
+            title:
+              value: Card 0 1
+            text:
+              # to author content in YAML, use _multi-line values_ (prefixed with | + CRLF)
+              # as long as the same indent is preserved at the beginning of each line, no escaping
+              # is required at all in the value, making it easy to read
+              value: |
+                <p>Landjaeger cow prosciutto porchetta meatball salami tongue.</p>
+            logoImage:
+              value:
+                src: "/data/media/img/facerec.jpg"
+                alt: Logo
+            link:
+              value:
+                href: http://www.sitecore.net
+                text: Learn More
+                class: btn btn-info btn-lg
+                target: _blank
+          params:
+            className: 'aboutpage'
+      c2:
+        - name: column4-2
+          displayName: Card 2
+          componentName: Card1
+          fields:
+            title:
+              value: Card 0 1
+            text:
+              # to author content in YAML, use _multi-line values_ (prefixed with | + CRLF)
+              # as long as the same indent is preserved at the beginning of each line, no escaping
+              # is required at all in the value, making it easy to read
+              value: |
+                <p>Landjaeger cow prosciutto porchetta meatball salami tongue.</p>
+            logoImage:
+              value:
+                src: "/data/media/img/facerec.jpg"
+                alt: Logo
+            link:
+              value:
+                href: http://www.sitecore.net
+                text: Learn More
+                class: btn btn-info btn-lg
+                target: _blank
+          params:
+            className: 'aboutpage'
+      c3:
+        - name: column4-3
+          displayName: Card 3
+          componentName: Card1
+          fields:
+            title:
+              value: Card 0 1
+            text:
+              # to author content in YAML, use _multi-line values_ (prefixed with | + CRLF)
+              # as long as the same indent is preserved at the beginning of each line, no escaping
+              # is required at all in the value, making it easy to read
+              value: |
+                <p>Landjaeger cow prosciutto porchetta meatball salami tongue.</p>
+            logoImage:
+              value:
+                src: "/data/media/img/facerec.jpg"
+                alt: Logo
+            link:
+              value:
+                href: http://www.sitecore.net
+                text: Learn More
+                class: btn btn-info btn-lg
+                target: _blank
+          params:
+            className: 'aboutpage'
+      c4:
+        - name: column4-4
+          displayName: Card 4
+          componentName: Card1
+          fields:
+            title:
+              value: Card 0 1
+            text:
+              # to author content in YAML, use _multi-line values_ (prefixed with | + CRLF)
+              # as long as the same indent is preserved at the beginning of each line, no escaping
+              # is required at all in the value, making it easy to read
+              value: |
+                <p>Landjaeger cow prosciutto porchetta meatball salami tongue.</p>
+            logoImage:
+              value:
+                src: "/data/media/img/facerec.jpg"
+                alt: Logo
+            link:
+              value:
+                href: http://www.sitecore.net
+                text: Learn More
+                class: btn btn-info btn-lg
+                target: _blank
+          params:
+            className: 'aboutpage'
+  
+
