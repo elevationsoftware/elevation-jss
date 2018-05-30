@@ -1,0 +1,21 @@
+<div class="container">
+  <ngb-carousel  *ngIf="!pageEditing; else pageEditingBlock">
+    <ng-template ngbSlide *ngFor="let item of rendering.fields.items">
+      <img *scImage="item.fields.image">
+      <div class="carousel-caption">
+        <h3 *scRichText="item?.fields?.title"></h3>
+        <p *scRichText="item?.fields?.body"></p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>
+
+
+
+<ng-template #pageEditingBlock>
+  <section class="page-editing">
+    <div class="carousel-slide" *ngFor="let item of rendering.fields.items">
+      <img *scImage="item.fields.image" />
+    </div>
+  </section>
+</ng-template>

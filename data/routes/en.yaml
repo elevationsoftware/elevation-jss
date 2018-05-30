@@ -7,6 +7,12 @@ displayName: Home
 placeholders:
   main:
   #- id: main-header-app
+  - componentName: Header
+    fields:
+      logoImage:
+        value:
+          src: "/data/media/img/elevatedlogo.png"
+          alt: Logo
   - componentName: Welcome
     fields:
       title:
@@ -31,7 +37,7 @@ placeholders:
           alt: Logo
     params:
       className: 'homepage'
-  #- componentName: Footer
+  - componentName: Footer
   # This is a shared component that is 'included' here. See ../component-content/Welcome/SharedWelcome/en.yaml
   # using shared components is a great way to sketch out a site quickly with FPO content.
   #- id: shared-welcome

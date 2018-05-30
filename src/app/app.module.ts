@@ -12,6 +12,12 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ServerErrorComponent } from './components/server-error/server-error.component';
 import { JssRouteComponent } from './components/jss-route/jss-route.component';
+import { Card1Component } from './components/card-1/card-1.component';
+import { HeaderComponent } from './components/header/header.component';
+import { Column4Component } from './renderings/column-4/column-4.component';
+import { Column2Component } from './renderings/column-2/column-2.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -21,6 +27,12 @@ import { JssRouteComponent } from './components/jss-route/jss-route.component';
     NotFoundComponent,
     ServerErrorComponent,
     JssRouteComponent,
+    Card1Component,
+    HeaderComponent,
+    Column4Component,
+    Column2Component,
+    CarouselComponent,
+    FooterComponent
   ],
   imports: [
     // withServerTransition is needed to enable universal rendering
@@ -31,7 +43,13 @@ import { JssRouteComponent } from './components/jss-route/jss-route.component';
     AppRoutingModule,
     AppJssInfrastructureModule,
     JssModule.withComponents([
-      { name: 'Welcome', type: WelcomeComponent }
+      { name: 'Welcome', type: WelcomeComponent },
+      { name: 'Card1', type: Card1Component},
+      { name: 'Column2', type: Column2Component },
+      { name: 'Column4', type: Column4Component },
+      { name: 'Carousel', type: CarouselComponent },
+      { name: 'Footer', type: FooterComponent },
+      { name: 'Header', type: HeaderComponent }
     ])
   ],
   bootstrap: [
