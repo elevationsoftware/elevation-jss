@@ -170,3 +170,21 @@ The rendering property is present in every sitecore component.
 - scRichText
 - scLink
 - scFile
+
+## Data binding in Components
+The way to access data from sitecore within the component is usually the same `rendering.fields.<fieldType>`
+
+`welcome.component.html`
+```html
+<div class="container m-t-70" [ngClass]="[rendering?.params?.className]">
+  <div class="row">
+    <div class="col-12">
+      <img *scImage="rendering.fields.logoImage" />
+    </div>
+    <div class="col-12">
+      <h1 class="contentTitle" *scText="rendering.fields.title"></h1>
+      <div class="contentDescription" *scRichText="rendering.fields.text"></div>
+    </div>
+  </div>
+</div>
+```
