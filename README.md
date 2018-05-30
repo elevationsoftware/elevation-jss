@@ -101,3 +101,39 @@ manifest.addPlaceholder(
 
   ## Using placeholders in the Route data file
 
+The process of placing component inside placeholders is always the same. First you need to speficy the component name, then you can set other components within the placeholders defined inside the parent component.
+
+*Example*
+
+`data/routes/about/en.yaml`
+```yaml
+name: about
+displayName: About
+placeholders:
+  main:
+  - id: main-header-app
+  - componentName: Welcome ...
+    --------
+  - componentName: Column2
+    id: about-page-column2-component
+    placeholders:
+      c-left:
+      - name: column2-left
+        displayName: Card Lefts
+        componentName: Card1
+        fields:
+          title:
+            value: Card 0 1
+          text:
+            value: ...
+          logoImage:
+            value: ...
+          link:
+            value: ...
+        params:
+          className: 'aboutpage'
+      c-right:
+      - name: column2-right
+        displayName: Card Right
+        componentName: Card1
+```
