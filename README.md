@@ -137,3 +137,5 @@ placeholders:
         displayName: Card Right
         componentName: Card1
 ```
+
+For more information visit [jss website](https://jss.sitecore.net/#/angular/intro?id=use-sc-placeholder-as-an-attribute)
