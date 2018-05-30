@@ -47,35 +47,3 @@ This step will:
 * Generate the app manifest.
 * Generate a package with the manifest and production bundle.
 * Install the package over HTTP on your Sitecore instance.
-
-## Adding new Components
-
-To add new Sitecore aware components, you need to complete the folliwing three steps:
- - Generate an Angular component using the cli
-    - `ng g c <new component name>`
- - Add the new component to the JssModule's list located at  `src/app/app.modules.ts`
- - Generate a new `Sitecore component definition`
-
-### Sitecore component definition
-All sitecore component definitions are located in `sitecore/definitions/components`
-
-*Example*
-
-```javascript
-import { Manifest, CommonFieldTypes, SitecoreIcon } from '@sitecore-jss/sitecore-jss-manifest';
-
-export default (manifest: Manifest) => {
-    manifest.addComponent({
-        name: 'Welcome',
-        displayName: 'Welcome',
-        // totally optional, but fun
-        icon: SitecoreIcon.EmoticonSmile,
-        fields: [
-        { name: 'logoImage', type: CommonFieldTypes.Image },
-        { name: 'title', type: CommonFieldTypes.SingleLineText },
-        { name: 'text', type: CommonFieldTypes.RichText },
-        ],
-        params: ['className']
-    });
-};
-```
